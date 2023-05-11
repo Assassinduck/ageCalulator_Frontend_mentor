@@ -1,6 +1,8 @@
 import React, { createContext } from "react"
 import dayjs from "dayjs"
 import { createContextUser } from "../util/createContextUser"
+import customParseFormat from "dayjs/plugin/customParseFormat"
+dayjs.extend(customParseFormat)
 interface DateServiceProps {
     isDayFieldValid: boolean,
     isMonthFieldValid: boolean,
@@ -81,6 +83,7 @@ const ProvideDateServiceComponent = ({ children }: ProvideDateServiceProps) => {
 
 
         const inputDataToDate = dayjs(`${date.day}/${date.month}/${date.year}`, "DD/MM/YYYY", true)
+
 
         const lastYear = dayjs().subtract(1, "year").get("year")
         const currentDay = dayjs().get("day")
