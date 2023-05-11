@@ -15,7 +15,7 @@ const DateNumberTextStyle = styled.p`
 
     @media screen and (max-width: 600px) {
     font-size:50px;
-    margin-right: 10px;
+    margin-right: 15px;
 
     }
 
