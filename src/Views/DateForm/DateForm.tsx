@@ -246,7 +246,7 @@ const DateFormComponent = (props: DateFormProps) => {
             <DividerAndButtonConatiner>
                 <Divider />
                 <CalculateAgeButton onClick={calculateAgeFunc} >
-                    <ArrowIcon src="./../../../public/icon-arrow.svg" alt="dwda" />
+                    <ArrowIcon src="./icon-arrow.svg" alt="dwda" />
                 </CalculateAgeButton>
             </DividerAndButtonConatiner>
         </>
