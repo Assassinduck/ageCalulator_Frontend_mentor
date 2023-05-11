@@ -12,10 +12,11 @@ const DateNumberTextStyle = styled.p`
     font-weight: "800i";
     color: hsl(259, 100%, 65%);
     text-align: center;
+    margin-right: 10px;
 
     @media screen and (max-width: 600px) {
     font-size:50px;
-    margin-right: 15px;
+    margin-right: 10px;
 
     }
 
