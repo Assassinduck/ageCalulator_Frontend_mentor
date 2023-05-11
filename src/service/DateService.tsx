@@ -1,8 +1,6 @@
 import React, { createContext } from "react"
 import dayjs from "dayjs"
-import * as customParseFormat from "dayjs/plugin/customParseFormat"
 import { createContextUser } from "../util/createContextUser"
-dayjs.extend(customParseFormat)
 interface DateServiceProps {
     isDayFieldValid: boolean,
     isMonthFieldValid: boolean,
@@ -50,7 +48,7 @@ const ProvideDateServiceComponent = ({ children }: ProvideDateServiceProps) => {
 
 
     const validateForm = (date: DateType) => {
-        const inputDataToDate = dayjs(`${date.day}/${date.month}/${date.year}`, "DD/MM/YYYY", true)
+        const inputDataToDate = dayjs(`${date.day}/${date.month}/${date.year}`, "DD/MM/YYYY")
         console.log(inputDataToDate);
 
         const isBeforetoDay = inputDataToDate.isBefore(dayjs())
